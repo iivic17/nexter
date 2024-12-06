@@ -112,7 +112,7 @@ body {
   row-gap: 1.5rem;
   padding: 8rem;
   padding-top: 4rem;
-  grid-template-columns: max-content;
+  grid-template-columns: minmax(min-content, max-content);
   justify-content: center; }
   .header__logo {
     height: 3rem;
@@ -133,9 +133,11 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 3rem;
-    justify-items: center; }
+    justify-items: center;
+    align-items: center; }
     .header__seenon-logos img {
-      height: 2.5rem;
+      max-height: 2.5rem;
+      max-width: 100%;
       filter: brightness(70%); }
   .header__btn {
     justify-self: start;
